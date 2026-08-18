@@ -1,4 +1,3 @@
-# ROS2
 
 # ROS 2 Humble Installation Project
 
