@@ -72,7 +72,7 @@ All 3 checks passed
 
 ROS 2 Humble verification screenshot:
 
-![ROS2 Evidence](IMG_4839.jpg)
+![ROS2 Evidence] (760818E9-0389-4DA7-B09D-483407917407.jpg)
 
 ---
 
