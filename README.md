@@ -1,31 +1,36 @@
-
 # ROS 2 Humble Installation Project
 
 ## Overview
 
-This repository documents the installation and verification process of ROS 2 Humble on Ubuntu.
+This project demonstrates the installation and configuration of ROS 2 Humble on Ubuntu Linux.
+
+The main objective of this task is to install the ROS 2 framework, configure the required environment, and verify that the installation is working correctly.
 
 ---
 
-# Installation Steps
+# 1. ROS 2 Humble Installation
 
-## 1. Install ROS 2 Humble
+ROS 2 Humble was installed successfully on Ubuntu Linux.
 
-```bash
-sudo apt install ros-humble-desktop
-```
+During the installation process, the required ROS 2 Humble packages were downloaded and configured.
+
+The installation was completed successfully as shown below:
+
+![ROS 2 Installation](ros2_installation.jpg)
 
 ---
 
-## 2. Configure ROS Environment
+# 2. ROS 2 Environment Setup
 
-Add ROS environment to bash:
+After installing ROS 2 Humble, the environment was configured to load automatically when opening the terminal.
+
+The following command was used:
 
 ```bash
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ```
 
-Load the environment:
+Then the environment was activated using:
 
 ```bash
 source ~/.bashrc
@@ -33,85 +38,62 @@ source ~/.bashrc
 
 ---
 
-# Verification
+# 3. Checking ROS 2 Distribution
 
-## Check ROS Distribution
-
-Command:
+The installed ROS 2 distribution was checked using:
 
 ```bash
 echo $ROS_DISTRO
 ```
 
-Result:
+The output confirmed that the installed version is:
 
-```text
+```bash
 humble
 ```
 
 ---
 
-## Check ROS System
+# 4. ROS 2 Doctor Verification
 
-Command:
+The ROS 2 system was tested using the ROS 2 doctor command:
 
 ```bash
 ros2 doctor
 ```
 
-Result:
+The verification process completed successfully and returned:
 
-```text
+```bash
 All 3 checks passed
 ```
 
----
+This confirms that the ROS 2 Humble installation and configuration were successful.
 
-# Evidence
+The verification screenshot is shown below:
 
-ROS 2 Humble verification screenshot:
-
-![ROS2 Evidence] (760818E9-0389-4DA7-B09D-483407917407.jpg)
+![ROS 2 Doctor Verification](ros2_doctor_evidence.jpg)
 
 ---
 
-# Problems Encountered
+# 5. Commands Used
 
-## Low Disk Space Issue
-
-During the installation process, a low disk space warning appeared.
-
-The issue was solved by cleaning unused packages:
+The main commands used during the setup process:
 
 ```bash
-sudo apt clean
-```
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
-```bash
-sudo apt autoremove -y
-```
+source ~/.bashrc
 
-Fixing interrupted packages:
+echo $ROS_DISTRO
 
-```bash
-sudo dpkg --configure -a
-```
-
-Repairing broken dependencies:
-
-```bash
-sudo apt --fix-broken install
+ros2 doctor
 ```
 
 ---
 
 # Conclusion
 
-ROS 2 Humble was successfully installed on Ubuntu.
+ROS 2 Humble was successfully installed and configured on Ubuntu Linux.
 
-The installation was verified using:
-
-- `echo $ROS_DISTRO`
-- `ros2 doctor`
-
-The system passed all ROS checks and is ready to use.
+The environment setup was completed, the ROS distribution was verified, and the ROS 2 doctor test confirmed that all checks passed successfully.
